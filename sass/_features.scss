@@ -1,0 +1,22 @@
+.features {
+	background-color: transparent;
+	grid-column: center-start / center-end;
+	padding: 15rem 0;
+	display: grid;
+	grid-gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	align-items: start;
+	.feature {
+		display: grid;
+		grid-template-columns: 5rem 1fr;
+		grid-gap: 1rem;
+
+		.icon-svg {
+			width: 4.5rem;
+			height: 4.5rem;
+			fill: $color-primary;
+			grid-row: 1 / span 2;
+			transform: translateY(-1rem);
+		}
+	}
+}
