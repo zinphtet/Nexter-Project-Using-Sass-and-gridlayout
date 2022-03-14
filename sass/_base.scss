@@ -33,16 +33,14 @@ a {
 li {
 	list-style-type: none;
 }
-.container > * {
-	font-size: 3rem;
-}
+// .container > * {
+// 	font-size: 3rem;
+// }
 .container {
 	display: grid;
-	grid-template-rows: 80vh repeat(5, min-content);
+	grid-template-rows: 80vh min-content min-content repeat(3, min-content);
 	grid-template-columns:
-		[side-start]8rem [side-end full-start] minmax(
-			6rem,
-			1fr
-		) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+		[side-start]8rem [side-end full-start] minmax(6rem, 1fr)
+		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 		[center-end] minmax(6rem, 1fr) [full-end];
 }

@@ -1,4 +1,60 @@
-.homes{
-    background-color: royalblue;
-    grid-column: center-start / center-end;
+.homes {
+	padding: 10rem 0;
+	// background-color: royalblue;
+	grid-column: center-start / center-end;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 5rem;
+	.home {
+		display: grid;
+		position: relative;
+		&_btn {
+			width: 100%;
+			padding: 1.5rem;
+		}
+		img {
+			width: 100%;
+		}
+		.house_name {
+			width: 80%;
+			margin: auto;
+			text-align: center;
+			transform: translateY(-50%);
+			padding: 1rem 0;
+			color: $color-grey-light-1;
+			background-color: $color-secondary;
+		}
+		.like-svg {
+			width: 3rem;
+			height: 3rem;
+			fill: $color-primary-dark;
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+		}
+		font-size: 1.5rem;
+		.house_info {
+			color: $color-primary-dark;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 3rem;
+			padding: 1rem;
+			margin-bottom: 2rem;
+			svg {
+				width: 2rem;
+				height: 2rem;
+				fill: $color-primary-dark;
+			}
+			& > div {
+				display: flex;
+				& svg {
+					margin-right: 1rem;
+				}
+				& p {
+					color: $color-secondary;
+				}
+			}
+		}
+	}
 }

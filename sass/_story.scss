@@ -1,4 +1,43 @@
 .testimonial {
 	background-color: blue;
 	grid-column: full-start / full-end;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: $color-grey-light-1;
+	// margin: 5rem 0;
+	&_img {
+		// border: 1px solid red;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		background-image: linear-gradient(
+				rgba($color-primary, 0.5),
+				rgba($color-primary, 0.5)
+			),
+			url('/img/back.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 40vw;
+		.story_img_1 {
+			width: 100%;
+			grid-column: 2 / span 4;
+			grid-row: 2 / span 4;
+		}
+		.story_img_2 {
+			width: 115%; // height: 100%;
+			grid-column: 4 / span 3;
+			grid-row: 4 / span 2;
+		}
+	}
+	&_text {
+		display: flex;
+		padding: 8vw;
+		// justify-content: center;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		& > * {
+			margin: 0.7rem 0;
+		}
+	}
 }

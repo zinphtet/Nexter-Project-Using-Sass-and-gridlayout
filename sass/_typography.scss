@@ -3,10 +3,49 @@
 	font-weight: 400;
 	color: $color-secondary;
 }
-
-.heading-4 {
+.para_small {
+	font-size: 1.3rem;
+	color: $color-grey-dark-2;
+	line-height: 1.5;
+}
+%heading {
 	font-family: $font-display;
 	font-weight: 400;
+}
+
+.heading-4 {
+	@extend %heading;
 	color: $color-secondary;
-	font-size: 2.3rem;
+	font-size: 2.1rem;
+}
+.heading-3 {
+	@extend %heading;
+	color: $color-primary-dark;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+}
+.heading-2 {
+	@extend %heading;
+	font-size: 4rem;
+	color: $color-grey-dark-2;
+	line-height: 1;
+}
+.italic {
+	font-style: italic;
+}
+.btn {
+	color: $color-grey-light-1;
+	padding: 0.7rem 1rem;
+	font-size: 1.5rem;
+	background-color: $color-primary;
+	border-radius: none !important;
+	font-style: inherit;
+	text-transform: uppercase;
+	transition: all 0.2s;
+	border: none;
+	outline: none;
+
+	&:hover {
+		background-color: $color-primary-dark;
+	}
 }

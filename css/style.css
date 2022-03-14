@@ -21,13 +21,9 @@ li {
   list-style-type: none;
 }
 
-.container > * {
-  font-size: 3rem;
-}
-
 .container {
   display: grid;
-  grid-template-rows: 80vh repeat(5, min-content);
+  grid-template-rows: 80vh min-content min-content repeat(3, min-content);
   grid-template-columns: [side-start] 8rem [side-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
@@ -37,11 +33,52 @@ li {
   color: #101d2c;
 }
 
-.heading-4 {
+.para_small {
+  font-size: 1.3rem;
+  color: #6d5d4b;
+  line-height: 1.5;
+}
+
+.heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+}
+
+.heading-4 {
   color: #101d2c;
-  font-size: 2.3rem;
+  font-size: 2.1rem;
+}
+
+.heading-3 {
+  color: #b28451;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.heading-2 {
+  font-size: 4rem;
+  color: #6d5d4b;
+  line-height: 1;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.btn {
+  color: #f9f7f6;
+  padding: 0.7rem 1rem;
+  font-size: 1.5rem;
+  background-color: #c69963;
+  border-radius: none !important;
+  font-style: inherit;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  border: none;
+  outline: none;
+}
+.btn:hover {
+  background-color: #b28451;
 }
 
 .sidebar {
@@ -85,11 +122,97 @@ li {
 .testimonial {
   background-color: blue;
   grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f9f7f6;
+}
+.testimonial_img {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url("/img/back.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vw;
+}
+.testimonial_img .story_img_1 {
+  width: 100%;
+  grid-column: 2/span 4;
+  grid-row: 2/span 4;
+}
+.testimonial_img .story_img_2 {
+  width: 115%;
+  grid-column: 4/span 3;
+  grid-row: 4/span 2;
+}
+.testimonial_text {
+  display: flex;
+  padding: 8vw;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.testimonial_text > * {
+  margin: 0.7rem 0;
 }
 
 .homes {
-  background-color: royalblue;
+  padding: 10rem 0;
   grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 5rem;
+}
+.homes .home {
+  display: grid;
+  position: relative;
+  font-size: 1.5rem;
+}
+.homes .home_btn {
+  width: 100%;
+  padding: 1.5rem;
+}
+.homes .home img {
+  width: 100%;
+}
+.homes .home .house_name {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  transform: translateY(-50%);
+  padding: 1rem 0;
+  color: #f9f7f6;
+  background-color: #101d2c;
+}
+.homes .home .like-svg {
+  width: 3rem;
+  height: 3rem;
+  fill: #b28451;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.homes .home .house_info {
+  color: #b28451;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.homes .home .house_info svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #b28451;
+}
+.homes .home .house_info > div {
+  display: flex;
+}
+.homes .home .house_info > div svg {
+  margin-right: 1rem;
+}
+.homes .home .house_info > div p {
+  color: #101d2c;
 }
 
 .gallery {
