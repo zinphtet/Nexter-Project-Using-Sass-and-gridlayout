@@ -85,6 +85,33 @@ li {
   background-color: #b28451;
   grid-column: side-start/side-end;
   grid-row: 1/-1;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+.sidebar-btn {
+  margin: 0 auto;
+  width: 5rem;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  border: none;
+  border-radius: 0;
+}
+.sidebar-btn::after, .sidebar-btn::before {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 2px;
+  display: block;
+}
+.sidebar-btn::before {
+  background-color: #fff;
+  transform: translateY(-1.5rem);
+}
+.sidebar-btn::after {
+  background-color: #fff;
+  transform: translateY(1.3rem);
 }
 
 .header {
@@ -216,13 +243,112 @@ li {
 }
 
 .gallery {
-  background-color: violet;
+  background-color: #f9f7f6;
   grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 5vw);
+  padding: 1.5rem;
+  grid-gap: 1.5rem;
+}
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-img-1 {
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+}
+.gallery-img-2 {
+  grid-column: 3/span 3;
+  grid-row: 1/span 3;
+}
+.gallery-img-3 {
+  grid-column: 6/span 1;
+  grid-row: 1/span 2;
+}
+.gallery-img-4 {
+  grid-column: 7/-1;
+  grid-row: 1/span 2;
+}
+.gallery-img-5 {
+  grid-column: 1/span 2;
+  grid-row: 3/span 3;
+}
+.gallery-img-6 {
+  grid-column: 3/span 2;
+  grid-row: 4/span 2;
+}
+.gallery-img-7 {
+  grid-column: 5/span 1;
+  grid-row: 4/span 1;
+}
+.gallery-img-8 {
+  grid-column: 6/span 2;
+  grid-row: 3/span 2;
+}
+.gallery-img-9 {
+  grid-column: 8/-1;
+  grid-row: 3/span 3;
+}
+.gallery-img-10 {
+  grid-column: 1/span 1;
+  grid-row: 6/-1;
+}
+.gallery-img-11 {
+  grid-column: 2/span 2;
+  grid-row: 6/-1;
+}
+.gallery-img-12 {
+  grid-column: 4/span 1;
+  grid-row: 6/-1;
+}
+.gallery-img-13 {
+  grid-column: 5/span 3;
+  grid-row: 5/-1;
+}
+.gallery-img-14 {
+  grid-column: 8/-1;
+  grid-row: 6/-1;
 }
 
 .footer {
-  background-color: gold;
+  background-color: #101d2c;
   grid-column: full-start/full-end;
+  padding: 8rem;
+}
+.footer .nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  align-items: center;
+  grid-gap: 2rem;
+}
+.footer .nav .footer_link {
+  text-align: center;
+  padding: 0.5rem;
+  transition: all 0.2s;
+}
+.footer .nav .footer_link a {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.footer .nav .footer_link:hover, .footer .nav .footer_link:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+.footer .copy-right {
+  margin-top: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+.footer .copy-right .para {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

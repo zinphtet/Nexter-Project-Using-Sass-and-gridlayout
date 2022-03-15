@@ -2,4 +2,34 @@
 	background-color: $color-primary-dark;
 	grid-column: side-start/side-end;
 	grid-row: 1 / -1;
+	// position: relative;
+	padding: 4rem 0;
+    display: flex;
+	justify-content: center;
+	&-btn {
+		margin: 0 auto;
+		width: 5rem;
+		height: 2px;
+		background-color: #fff;
+		position: relative;
+		border: none;
+		border-radius: 0;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			width: 5rem;
+			height: 2px;
+			display: block;
+		}
+		&::before {
+			background-color: #fff;
+			transform: translateY(-1.5rem);
+		}
+		&::after {
+			background-color: #fff;
+			transform: translateY(1.3rem);
+		}
+	}
 }

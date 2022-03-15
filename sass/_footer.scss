@@ -1,4 +1,39 @@
 .footer {
-	background-color: gold;
-    grid-column: full-start / full-end;
+	background-color: $color-secondary;
+	grid-column: full-start / full-end;
+	padding: 8rem;
+	.nav {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		align-items: center;
+		grid-gap: 2rem;
+
+		.footer_link {
+			text-align: center;
+			padding: 0.5rem;
+			transition: all 0.2s;
+			a {
+				color: #fff;
+				font-size: 1.4rem;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+			&:hover,
+			&:focus {
+				background-color: rgba(#fff, 0.05);
+				transform: translateY(-2px);
+			}
+		}
+	}
+	.copy-right {
+		margin-top: 5rem;
+		margin-right: auto;
+		margin-left: auto;
+		width: 90%;
+		.para {
+			color: #fff;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+	}
 }
