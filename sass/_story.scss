@@ -8,15 +8,21 @@
 	&_img {
 		// border: 1px solid red;
 		display: grid;
+		// grid-column: 1 / span 1;
+		// grid-row: 1 / span 1;
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(6, 1fr);
+		height: 100%;
+		width: 100%;
+		// border: 1px solid red;
 		background-image: linear-gradient(
 				rgba($color-primary, 0.5),
 				rgba($color-primary, 0.5)
 			),
 			url('/img/back.jpg');
-		background-size: cover;
-		background-position: center;
+		background-size: 100%;
+		background-position: bottom;
+		object-fit: cover;
 		height: 40vw;
 		.story_img_1 {
 			width: 100%;
@@ -30,6 +36,7 @@
 		}
 	}
 	&_text {
+		// border: 1px solid rebeccapurple;
 		display: flex;
 		padding: 8vw;
 		// justify-content: center;

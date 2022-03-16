@@ -115,13 +115,103 @@ li {
 }
 
 .header {
-  background-color: greenyellow;
   grid-column: full-start/col-end 6;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("../img/hero.jpeg");
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  display: grid;
+  grid-template-rows: 30% 40% 30%;
+  grid-template-columns: 5vw 1fr 5vw;
+}
+.header .logo {
+  grid-row: 1/span 1;
+  grid-column: 2/span 1;
+  height: 3rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+.header .logo img {
+  height: 100%;
+}
+.header .banner {
+  grid-row: 2/span 1;
+  grid-column: 2/span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header .banner > * {
+  margin-bottom: 1.5rem;
+}
+.header .banner .heading-2 {
+  color: #fff;
+  font-size: 4.5rem;
+}
+.header .banner .btn {
+  padding: 1.5rem 2rem;
+}
+.header .screen_on {
+  grid-row: 3/span 1;
+  grid-column: 2/span 1;
+}
+.header .screen_on .screen_text {
+  font-size: 1.8rem;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  grid-gap: 3rem;
+  margin-bottom: 1.5rem;
+}
+.header .screen_on .screen_text::after, .header .screen_on .screen_text::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #c69963;
+}
+.header .screen_on .brands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  justify-items: center;
+  grid-gap: 2rem;
+}
+.header .screen_on .brands img {
+  height: 2.5rem;
+  filter: brightness(70%);
 }
 
 .relator {
-  background-color: aqua;
+  background-color: #101d2c;
   grid-column: col-end 6/full-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.relator .inner .heading-3 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.relator .inner .relators > * {
+  margin-bottom: 3rem;
+}
+.relator .inner .relators .relator {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 2rem;
+}
+.relator .inner .relators .relator .name {
+  font-size: 2rem;
+  color: #fff;
+}
+.relator .inner .relators .relator .name span {
+  display: block;
+  color: #aaa;
+  font-size: 1.5rem;
+}
+.relator .inner .relators .relator img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
 }
 
 .features {
@@ -157,9 +247,12 @@ li {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url("/img/back.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
+  background-position: bottom;
+  object-fit: cover;
   height: 40vw;
 }
 .testimonial_img .story_img_1 {
