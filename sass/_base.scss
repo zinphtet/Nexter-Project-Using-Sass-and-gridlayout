@@ -14,6 +14,11 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+//Query
+$phone: 37.5rem;
+$table-port: 56.25rem;
+$table-land: 75rem;
+$large: 112.5rem;
 *,
 *::after,
 *::before {
@@ -26,16 +31,25 @@ html {
 	font-family: $font-primary;
 	line-height: 1.6;
 	color: $color-grey-light-2;
+
+	@media only screen and (max-width: $table-land) {
+		font-size: 56.25%;
+	}
+	@media only screen and (max-width: $table-port) {
+		font-size: 56.25%;
+	}
+	@media only screen and (max-width: $phone) {
+		font-size: 50%;
+	}
 }
+
 a {
 	text-decoration: none;
 }
 li {
 	list-style-type: none;
 }
-// .container > * {
-// 	font-size: 3rem;
-// }
+
 .container {
 	display: grid;
 	grid-template-rows: 80vh min-content min-content repeat(3, min-content);
@@ -43,4 +57,16 @@ li {
 		[side-start]8rem [side-end full-start] minmax(6rem, 1fr)
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 		[center-end] minmax(6rem, 1fr) [full-end];
+
+	@media only screen and (max-width: $table-port) {
+		grid-template-rows: 8rem calc(80vh - 8rem) min-content min-content min-content repeat(
+				3,
+				min-content
+			);
+
+		grid-template-columns:
+			[side-start] minmax(2rem, 1fr) [side-end full-start] minmax(2rem, 1fr)
+			[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+			[center-end] minmax(2rem, 1fr) [full-end];
+	}
 }

@@ -1,6 +1,9 @@
 .gallery {
 	background-color: $color-grey-light-1;
 	grid-column: center-start / center-end;
+	@media only screen and (max-width: $table-port) {
+		grid-column: full-start / center-end;
+	}
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(7, 5vw);
@@ -66,7 +69,7 @@
 		}
 		&-14 {
 			grid-column: 8 / -1;
-			grid-row: 6 /  -1;
+			grid-row: 6 / -1;
 		}
 	}
 }

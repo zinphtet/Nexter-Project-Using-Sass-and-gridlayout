@@ -1,6 +1,9 @@
 .features {
 	background-color: transparent;
 	grid-column: center-start / center-end;
+	@media only screen and (max-width: $table-port) {
+		grid-column: full-start / center-end;
+	}
 	padding: 15rem 0;
 	display: grid;
 	grid-gap: 5rem;

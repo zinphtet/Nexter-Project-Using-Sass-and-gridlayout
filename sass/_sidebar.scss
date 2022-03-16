@@ -2,12 +2,26 @@
 	background-color: $color-primary-dark;
 	grid-column: side-start/side-end;
 	grid-row: 1 / -1;
+
+	@media only screen and (max-width: $table-port) {
+		grid-row: 1 / span 1;
+		grid-column: 1 / -1;
+	}
 	// position: relative;
 	padding: 4rem 0;
-    display: flex;
+	display: flex;
 	justify-content: center;
+	@media only screen and (max-width: $table-port) {
+		grid-row: 1 / span 1;
+		grid-column: 1 / -1;
+	}
 	&-btn {
 		margin: 0 auto;
+		@media only screen and (max-width: $table-port) {
+			// margin: auto;
+			margin-right: 3rem;
+			margin-left: auto;
+		}
 		width: 5rem;
 		height: 2px;
 		background-color: #fff;

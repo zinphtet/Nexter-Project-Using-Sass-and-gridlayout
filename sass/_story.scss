@@ -4,6 +4,10 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	background-color: $color-grey-light-1;
+
+	@media only screen and (max-width: $table-port) {
+		grid-template-columns: 1fr;
+	}
 	// margin: 5rem 0;
 	&_img {
 		// border: 1px solid red;
@@ -24,15 +28,32 @@
 		background-position: bottom;
 		object-fit: cover;
 		height: 40vw;
+
+		@media only screen and (max-width: $table-port) {
+			height: 50vw;
+		}
 		.story_img_1 {
 			width: 100%;
 			grid-column: 2 / span 4;
 			grid-row: 2 / span 4;
+			height: 100%;
+			object-fit: cover;
+			@media only screen and (max-width: $table-port) {
+				grid-column: 2 / span 3;
+				grid-row: 2 / span 4;
+			}
 		}
 		.story_img_2 {
 			width: 115%; // height: 100%;
 			grid-column: 4 / span 3;
 			grid-row: 4 / span 2;
+			height: 100%;
+			object-fit: cover;
+			@media only screen and (max-width: $table-port) {
+				width: 100%;
+				grid-column: 4 / span 2;
+				grid-row: 3 / span 2;
+			}
 		}
 	}
 	&_text {

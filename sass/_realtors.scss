@@ -4,15 +4,35 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media only screen and (max-width: $table-port) {
+		grid-row: 3 / span 1;
+		grid-column: 1 / -1;
+	}
 	.inner {
-		.heading-3{
+		@media only screen and (max-width: $table-port) {
+			padding: 3rem 0;
+		}
+
+		.heading-3 {
 			text-align: center;
 			margin-bottom: 3rem;
 		}
+		@media only screen and (max-width: $table-port) {
+			margin-bottom: 1.5rem;
+		}
 		.relators {
-			
-			&>*{
+			& > * {
 				margin-bottom: 3rem;
+			}
+			@media only screen and (max-width: $table-port) {
+				display: flex;
+				& > * {
+					margin-right: 3rem;
+				}
+			}
+			@media only screen and (max-width: $table-port) {
+				flex-direction: column;
 			}
 			.relator {
 				display: grid;

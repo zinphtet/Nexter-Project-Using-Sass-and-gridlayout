@@ -1,5 +1,9 @@
 .header {
 	grid-column: full-start/col-end 6;
+
+	@media only screen and (max-width: $table-port) {
+		grid-column: side-start/full-end;
+	}
 	background-image: linear-gradient(
 			rgba($color-secondary, 0.9),
 			rgba($color-secondary, 0.9)
@@ -8,17 +12,16 @@
 	background-position: center;
 	background-size: cover;
 	object-fit: cover;
-	// display: flex;
-	// flex-direction: column;
+	
 	display: grid;
-	grid-template-rows: 30% 40% 30%;
+	grid-template-rows: 25% 45% 30%;
 	grid-template-columns: 5vw 1fr 5vw;
 	.logo {
 		grid-row: 1 / span 1;
 		grid-column: 2 / span 1;
 		height: 3rem;
 		margin-top: 4rem;
-		// padding-top: 2rem;
+		
 		text-align: center;
 		img {
 			height: 100%;
@@ -29,14 +32,15 @@
 		grid-column: 2 / span 1;
 		display: flex;
 		flex-direction: column;
-		// justify-items: flex-start;
+		
 		align-items: flex-start;
 		& > * {
-			margin-bottom: 1.5rem;
+			margin-bottom: 2.5rem;
 		}
 		.heading-2 {
 			color: #fff;
 			font-size: 4.5rem;
+			line-height: 1;
 		}
 		.btn {
 			padding: 1.5rem 2rem;
@@ -70,6 +74,12 @@
 				// width: 7rem;
 				height: 2.5rem;
 				filter: brightness(70%);
+				@media only screen and (max-width: $table-land) {
+					height: 2.2rem;
+				}
+				@media only screen and (max-width: $table-land) {
+					height: 1.8rem;
+				}
 			}
 		}
 	}

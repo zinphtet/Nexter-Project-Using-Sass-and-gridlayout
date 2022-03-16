@@ -1,7 +1,10 @@
 .homes {
 	padding: 10rem 0;
-	// background-color: royalblue;
+
 	grid-column: center-start / center-end;
+	@media only screen and (max-width: $table-port) {
+		grid-column: full-start / center-end;
+	}
 
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));

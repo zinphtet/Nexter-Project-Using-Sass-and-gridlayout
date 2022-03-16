@@ -12,6 +12,21 @@ html {
   line-height: 1.6;
   color: #aaa;
 }
+@media only screen and (max-width: 75rem) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25rem) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  html {
+    font-size: 50%;
+  }
+}
 
 a {
   text-decoration: none;
@@ -25,6 +40,12 @@ li {
   display: grid;
   grid-template-rows: 80vh min-content min-content repeat(3, min-content);
   grid-template-columns: [side-start] 8rem [side-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 56.25rem) {
+  .container {
+    grid-template-rows: 8rem calc(80vh - 8rem) min-content min-content min-content repeat(3, min-content);
+    grid-template-columns: [side-start] minmax(2rem, 1fr) [side-end full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+  }
 }
 
 .para {
@@ -89,6 +110,18 @@ li {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 56.25rem) {
+  .sidebar {
+    grid-row: 1/span 1;
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 56.25rem) {
+  .sidebar {
+    grid-row: 1/span 1;
+    grid-column: 1/-1;
+  }
+}
 .sidebar-btn {
   margin: 0 auto;
   width: 5rem;
@@ -97,6 +130,12 @@ li {
   position: relative;
   border: none;
   border-radius: 0;
+}
+@media only screen and (max-width: 56.25rem) {
+  .sidebar-btn {
+    margin-right: 3rem;
+    margin-left: auto;
+  }
 }
 .sidebar-btn::after, .sidebar-btn::before {
   content: "";
@@ -121,8 +160,13 @@ li {
   background-size: cover;
   object-fit: cover;
   display: grid;
-  grid-template-rows: 30% 40% 30%;
+  grid-template-rows: 25% 45% 30%;
   grid-template-columns: 5vw 1fr 5vw;
+}
+@media only screen and (max-width: 56.25rem) {
+  .header {
+    grid-column: side-start/full-end;
+  }
 }
 .header .logo {
   grid-row: 1/span 1;
@@ -142,11 +186,12 @@ li {
   align-items: flex-start;
 }
 .header .banner > * {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 .header .banner .heading-2 {
   color: #fff;
   font-size: 4.5rem;
+  line-height: 1;
 }
 .header .banner .btn {
   padding: 1.5rem 2rem;
@@ -179,6 +224,16 @@ li {
   height: 2.5rem;
   filter: brightness(70%);
 }
+@media only screen and (max-width: 75rem) {
+  .header .screen_on .brands img {
+    height: 2.2rem;
+  }
+}
+@media only screen and (max-width: 75rem) {
+  .header .screen_on .brands img {
+    height: 1.8rem;
+  }
+}
 
 .relator {
   background-color: #101d2c;
@@ -187,12 +242,41 @@ li {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 56.25rem) {
+  .relator {
+    grid-row: 3/span 1;
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 56.25rem) {
+  .relator .inner {
+    padding: 3rem 0;
+  }
+}
 .relator .inner .heading-3 {
   text-align: center;
   margin-bottom: 3rem;
 }
+@media only screen and (max-width: 56.25rem) {
+  .relator .inner {
+    margin-bottom: 1.5rem;
+  }
+}
 .relator .inner .relators > * {
   margin-bottom: 3rem;
+}
+@media only screen and (max-width: 56.25rem) {
+  .relator .inner .relators {
+    display: flex;
+  }
+  .relator .inner .relators > * {
+    margin-right: 3rem;
+  }
+}
+@media only screen and (max-width: 56.25rem) {
+  .relator .inner .relators {
+    flex-direction: column;
+  }
 }
 .relator .inner .relators .relator {
   display: grid;
@@ -223,6 +307,11 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: start;
 }
+@media only screen and (max-width: 56.25rem) {
+  .features {
+    grid-column: full-start/center-end;
+  }
+}
 .features .feature {
   display: grid;
   grid-template-columns: 5rem 1fr;
@@ -243,6 +332,11 @@ li {
   grid-template-columns: 1fr 1fr;
   background-color: #f9f7f6;
 }
+@media only screen and (max-width: 56.25rem) {
+  .testimonial {
+    grid-template-columns: 1fr;
+  }
+}
 .testimonial_img {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -255,15 +349,37 @@ li {
   object-fit: cover;
   height: 40vw;
 }
+@media only screen and (max-width: 56.25rem) {
+  .testimonial_img {
+    height: 50vw;
+  }
+}
 .testimonial_img .story_img_1 {
   width: 100%;
   grid-column: 2/span 4;
   grid-row: 2/span 4;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (max-width: 56.25rem) {
+  .testimonial_img .story_img_1 {
+    grid-column: 2/span 3;
+    grid-row: 2/span 4;
+  }
 }
 .testimonial_img .story_img_2 {
   width: 115%;
   grid-column: 4/span 3;
   grid-row: 4/span 2;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (max-width: 56.25rem) {
+  .testimonial_img .story_img_2 {
+    width: 100%;
+    grid-column: 4/span 2;
+    grid-row: 3/span 2;
+  }
 }
 .testimonial_text {
   display: flex;
@@ -282,6 +398,11 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 5rem;
+}
+@media only screen and (max-width: 56.25rem) {
+  .homes {
+    grid-column: full-start/center-end;
+  }
 }
 .homes .home {
   display: grid;
@@ -343,6 +464,11 @@ li {
   grid-template-rows: repeat(7, 5vw);
   padding: 1.5rem;
   grid-gap: 1.5rem;
+}
+@media only screen and (max-width: 56.25rem) {
+  .gallery {
+    grid-column: full-start/center-end;
+  }
 }
 .gallery-img img {
   width: 100%;
